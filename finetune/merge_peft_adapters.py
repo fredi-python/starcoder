@@ -31,8 +31,8 @@ def main():
 
     if args.push_to_hub:
         print(f"Saving to hub ...")
-        model.push_to_hub(f"{args.repo_name}-merged", use_temp_dir=False, private=False)
-        tokenizer.push_to_hub(f"{args.repo_name}-merged", use_temp_dir=False, private=False)
+        model.push_to_hub(f"{args.repo_name}-merged", use_temp_dir=True, private=False)
+        tokenizer.push_to_hub(f"{args.repo_name}-merged", use_temp_dir=True, private=False)
     else:
         model.save_pretrained(f"{args.repo_name}-merged")
         tokenizer.save_pretrained(f"{args.repo_name}-merged")
